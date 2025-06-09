@@ -1,1 +1,24 @@
-{
+[
+  {
+    "title": "Shape of You",
+    "artist": "Ed Sheeran",
+    "genre": "Pop",
+    "file": "/Songs/english/Believer (Ft. Imagine Dragons).mp3",
+    "cover": "Songs/english/cover.jpeg"
+  },
+  {
+    "title": "Astronaut in the Ocean",
+    "artist": "Masked Wolf",
+    "genre": "Pop",
+    "file": "/Songs/songs/Astronaut  in the Ocean (Ft. Masked Wolf).mp3",
+    "cover": "Songs/english/cover.jpeg"
+  },
+  {
+    "title": "Tum Hi Ho",
+    "artist": "Arijit Singh",
+    "genre": "Hindi",
+    "file": "/Songs/hindi/Bang Bang - Shareek 2 320 Kbps.mp3",
+    "cover": "Songs/hindi/cover.jpeg"
+  }
+]
+
