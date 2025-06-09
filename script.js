@@ -47,111 +47,60 @@ collapsibleButton.addEventListener("click", function () {
   }
 });
 
-//(perfect)
-//async function getSongs(folder) {
-//  currFolder = folder;
-//  let a = await fetch(`/${folder}/`);
-  // let response = await a.text();
-  // let div = document.createElement("div");
-  // div.innerHTML = response;
-  // let as = div.getElementsByTagName("a");
-  // songs = [];
-  // for (let index = 0; index < as.length; index++) {
-  //   const element = as[index];
-  //   if (element.href.endsWith(".mp3") || element.href.endsWith(".flac")) {
-  //     songs.push(element.href.split(`/${folder}/`)[1]);
-  //   }
-  // }
-
-  // //for  showing all songs in playlists (perfect)
-  // let songUL = document
-  //   .querySelector(".allsongs")
-  //   .getElementsByTagName("ul")[0];
-  // songUL.innerHTML = "";
-  // for (const song of songs) {
-  //   const decodedSongName = decodeURIComponent(song.replaceAll("%20", " "));
-  //   songUL.innerHTML =
-  //     songUL.innerHTML +
-  //     ` 
-  //     <li>
-  //      <span class="allsongs-pic">
-  //       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-  //   <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" />
-  //   <path d="M12 8V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-  //   <path d="M9 10V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-  //   <path d="M6 11V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-  //   <path d="M15 10V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-  //   <path d="M18 11V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-  //       </svg>
-  //      </span>
-
-  //     <div class="allsongs-name">
-  //      ${song.replaceAll("%20", " ")}
-  //     </div>
-      
-  //     <span class="allsongs-playbtn">
-  //     <p>
-  //     Play Now
-  //     </p>
-  //      <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-  //       <path fill-rule="evenodd" d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z" clip-rule="evenodd"/>
-  //      </svg>
-  //     </span>
-
-  //     </li>
-  //     `;
-  // }
-
-
+//Fetching Song 
 async function getSongs(folder) {
-  currFolder = folder;
-  let songs = [];
-  try {
-    // Fetch the JSON manifest instead of trying to fetch the directory
-    let response = await fetch(`${folder}/songs.json`);
-    let data = await response.json();
-    songs = data.songs || [];
-  } catch (error) {
-    console.error("Could not load song list:", error);
-    return [];
+ currFolder = folder;
+ let a = await fetch(`/${folder}/`);
+  let response = await a.text();
+  let div = document.createElement("div");
+  div.innerHTML = response;
+  let as = div.getElementsByTagName("a");
+  songs = [];
+  for (let index = 0; index < as.length; index++) {
+    const element = as[index];
+    if (element.href.endsWith(".mp3") || element.href.endsWith(".flac")) {
+      songs.push(element.href.split(`/${folder}/`)[1]);
+    }
   }
 
-  // Render the song list
-  let songUL = document.querySelector(".allsongs ul");
+  //for  showing all songs in playlists (perfect)
+  let songUL = document
+    .querySelector(".allsongs")
+    .getElementsByTagName("ul")[0];
   songUL.innerHTML = "";
   for (const song of songs) {
     const decodedSongName = decodeURIComponent(song.replaceAll("%20", " "));
-    songUL.innerHTML += `
+    songUL.innerHTML =
+      songUL.innerHTML +
+      ` 
       <li>
-        <span class="allsongs-pic">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-            <!-- SVG Paths here -->
-          </svg>
-        </span>
-        <div class="allsongs-name">
-          ${decodedSongName}
-        </div>
-        <span class="allsongs-playbtn">
-          <p>Play Now</p>
-          <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-              fill="currentColor" viewBox="0 0 24 24">
-            <path fill-rule="evenodd" d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z" clip-rule="evenodd"/>
-          </svg>
-        </span>
+       <span class="allsongs-pic">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+    <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" />
+    <path d="M12 8V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M9 10V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M6 11V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M15 10V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M18 11V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+       </span>
+
+      <div class="allsongs-name">
+       ${song.replaceAll("%20", " ")}
+      </div>
+      
+      <span class="allsongs-playbtn">
+      <p>
+      Play Now
+      </p>
+       <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path fill-rule="evenodd" d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z" clip-rule="evenodd"/>
+       </svg>
+      </span>
+
       </li>
-    `;
+      `;
   }
-
-  // Attach event listeners for play
-  Array.from(songUL.getElementsByTagName("li")).forEach((e) => {
-    e.addEventListener("click", (element) => {
-      playMusic(e.querySelector(".allsongs-name").innerHTML.trim());
-    });
-  });
-
-  return songs;
-}
 
   // Event listerner for Playing Each songs
   Array.from(
