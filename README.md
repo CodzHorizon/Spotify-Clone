@@ -23,6 +23,7 @@ A fully responsive **Spotify Clone** built using **HTML**, **CSS**, and **JavaSc
 - 📱 Fully responsive layout across mobile, tablet, and desktop
 - 🖼️ Album cover and song metadata display
 - 🔄 Smooth transitions and interactions
+- 🍔 Hambuger for Mobile view using JS
 
 ---
 
