@@ -4,6 +4,14 @@ A fully responsive **Spotify Clone** built using **HTML**, **CSS**, and **JavaSc
 
 ---
 
+# ScreenShots 
+
+![image](https://github.com/user-attachments/assets/2635284c-1e04-41db-8af4-4855e5f26d8a)
+
+
+
+
+---
 ## 🚀 Features
 
 - 🔊 Custom audio playbar with:
@@ -46,7 +54,7 @@ A fully responsive **Spotify Clone** built using **HTML**, **CSS**, and **JavaSc
 ## 👨‍💻 Author
 
 **Your Name**  
-GitHub: [@yourusername](https://github.com/yourusername)
+GitHub: [@CodzHorizon](https://github.com/CodzHorizon)
 
 ---
 
@@ -58,6 +66,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## ©️ Copyright
 
-© 2025 Your Name. All rights reserved.
+© 2025 CodzHorizon. All rights reserved.
 
 This project is intended for educational and personal use only. Spotify and its logo are trademarks of Spotify AB. This clone is not affiliated with or endorsed by Spotify in any way.
