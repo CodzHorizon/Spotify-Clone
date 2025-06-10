@@ -6,15 +6,11 @@ A fully responsive **Spotify Clone** built using **HTML**, **CSS**, and **JavaSc
 
 # ScreenShots 
 
-![image](https://github.com/user-attachments/assets/2635284c-1e04-41db-8af4-4855e5f26d8a)
-
-![image](https://github.com/user-attachments/assets/d526cc94-8f11-4a0e-b59c-843fc4dfdc77)
+![image](https://github.com/user-attachments/assets/2635284c-1e04-41db-8af4-4855e5f26d8a) ![image](https://github.com/user-attachments/assets/d526cc94-8f11-4a0e-b59c-843fc4dfdc77)
 
 ## Mobile View
 
-![image](https://github.com/user-attachments/assets/c5c04370-e5eb-4ef0-b10f-26f866410d72)
-
-![image](https://github.com/user-attachments/assets/feb00992-6012-48a9-afc1-059216b7490e)
+![image](https://github.com/user-attachments/assets/c5c04370-e5eb-4ef0-b10f-26f866410d72) ![image](https://github.com/user-attachments/assets/feb00992-6012-48a9-afc1-059216b7490e)
 
 ---
 ## 🚀 Features
