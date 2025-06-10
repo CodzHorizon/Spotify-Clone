@@ -8,8 +8,9 @@ A fully responsive **Spotify Clone** built using **HTML**, **CSS**, and **JavaSc
 
 ![image](https://github.com/user-attachments/assets/2635284c-1e04-41db-8af4-4855e5f26d8a)
 
+![image](https://github.com/user-attachments/assets/d526cc94-8f11-4a0e-b59c-843fc4dfdc77)
 
-
+## Mobile View
 
 ---
 ## 🚀 Features
