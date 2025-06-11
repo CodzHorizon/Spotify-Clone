@@ -55,7 +55,6 @@ A fully responsive **Spotify Clone** built using **HTML**, **CSS**, and **JavaSc
 
 ## 👨‍💻 Author
 
-**Your Name**  
 GitHub: [@CodzHorizon](https://github.com/CodzHorizon)
 
 ---
